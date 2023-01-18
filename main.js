@@ -1,7 +1,7 @@
 let times = document.getElementById('times');
 let dice = document.querySelectorAll('.dice');
 let rollButton = document.getElementById('rollButton'); 
-
+let containerDiv = document.getElementById('container');
 
 let numDice = 0;
 let numTimes = 0;
@@ -115,7 +115,7 @@ function findMode(a){
     let mode = findMode(formattedResults);
     
     let table1 = document.createElement("table");
-    document.body.appendChild(table1);
+    containerDiv.appendChild(table1);
     let headerRow = document.createElement("tr");
     let contentRow = document.createElement("tr");
     table1.append(headerRow, contentRow);
@@ -153,7 +153,7 @@ function findMode(a){
     contentRow.append(meanCell, medianCell, modeCell)
     
     let table2 = document.createElement("table");
-    document.body.appendChild(table2);
+    containerDiv.appendChild(table2);
     let blankHeader = document.createElement("th");
     let frequencyHeader = document.createElement("th");
     frequencyHeader.innerHTML = "Frequency";
